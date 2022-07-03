@@ -1,4 +1,4 @@
-function loadPage() {
+function loadHomePage() {
   const pagecontent = document.querySelector("#content");
   const header = document.createElement("header");
   const navbar = document.createElement("div");
@@ -49,4 +49,4 @@ function loadPage() {
   return pagecontent;
 }
 
-export { loadPage };
+export { loadHomePage };

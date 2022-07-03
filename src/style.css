@@ -20,7 +20,7 @@ body {
   background-size: cover;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
@@ -77,9 +77,9 @@ header {
 }
 
 footer {
-  bottom: 0;
-  position: absolute;
   width: 100vw;
+  position: fixed;
+  bottom: 0;
 }
 
 .bottomsection {
@@ -90,4 +90,64 @@ footer {
   justify-content: center;
   gap: 2rem;
   color: white;
+}
+
+.menugrid {
+  width: max-content;
+  padding: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  gap: 3rem;
+  width: 50%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  /* border-radius: 50px; */
+  height: 200px;
+  width: 200px;
+}
+
+.imageone {
+  background: url(./PikPng.com_food-png_592722.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.imagetwo {
+  background: url(./PikPng.com_ramen-noodles-png_653386.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.imagethree {
+  background: url(./PikPng.com_ramen-noodles-png_653531.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.imagefour {
+  background: url(./PikPng.com_ramen-noodles-png_653616.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.imagefive {
+  background: url(./PikPng.com_ramen-png_2338587.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.imagesix {
+  background: url(./PikPng.com_cup-noodles-png_4765479.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
