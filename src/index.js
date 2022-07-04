@@ -1,23 +1,26 @@
-import { loadHomePage } from "./homepage.js";
+import { loadHomePage, loadHomeNotFirst } from "./homepage.js";
 import { loadMenuPage } from "./menupage.js";
 import "./style.css";
 
-document.body.appendChild(loadMenuPage());
-
-const contentItems = document.querySelector(".content");
-if (contentItems) {
-  contentItems.addEventListener("click", (e) => {
-    console.log("yep");
-    while (contentItems.firstChild) {
-      contentItems.removeChild(contentItems.lastChild);
-    }
-  });
-}
+document.body.appendChild(loadHomePage());
 
 const homeSelect = document.querySelector(".home");
+const menuSelect = document.querySelector(".menu");
+
 homeSelect.addEventListener("click", (e) => {
-  console.log("yep");
-  const contentItems = document.querySelector("#content");
-  contentItems.textContent = "";
-  document.body.appendChild(loadMenuPage());
+  if (!!document.querySelector(".menugrid")) {
+    const menuItem = document.querySelector(".menugrid");
+    console.log("yep");
+    menuItem.parentNode.removeChild(menuItem);
+    document.body.appendChild(loadHomeNotFirst());
+  }
+});
+
+menuSelect.addEventListener("click", (e) => {
+  if (!!document.querySelector(".shulkwithcaption")) {
+    const homeItem = document.querySelector(".shulkwithcaption");
+    console.log("yep");
+    homeItem.parentNode.removeChild(homeItem);
+    document.body.appendChild(loadMenuPage());
+  }
 });

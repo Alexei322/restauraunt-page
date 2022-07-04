@@ -1,27 +1,5 @@
 function loadMenuPage() {
   const pagecontent = document.querySelector("#content");
-  const header = document.createElement("header");
-  const navbar = document.createElement("div");
-  navbar.classList.add("navBar");
-  header.appendChild(navbar);
-  const h2top = document.createElement("h2");
-  h2top.classList.add("titleheading");
-  h2top.textContent = "Xenoblade eatery";
-  navbar.appendChild(h2top);
-  const navlist = document.createElement("ul");
-  navlist.classList.add("listitems");
-  const buttonone = document.createElement("button");
-  buttonone.classList.add("home");
-  buttonone.textContent = "Home";
-  const buttontwo = document.createElement("button");
-  buttontwo.classList.add("menu");
-  buttontwo.textContent = "Menu";
-  const buttonthree = document.createElement("button");
-  buttonthree.classList.add("contact");
-  buttonthree.textContent = "Contact us";
-  navlist.append(buttonone, buttontwo, buttonthree);
-  navbar.appendChild(navlist);
-  pagecontent.appendChild(header);
   const menusection = document.createElement("div");
   menusection.classList.add("menugrid");
   const sectionone = document.createElement("div");
@@ -102,18 +80,6 @@ function loadMenuPage() {
   dishsixdesc.textContent = "The most delicious food - £3.20!";
   sectionsix.append(dishsix, dishimgsix, dishsixdesc);
   menusection.appendChild(sectionsix);
-  const pagefooter = document.createElement("footer");
-  const bottomsection = document.createElement("div");
-  bottomsection.classList.add("bottomsection");
-  const bottomitem = document.createElement("div");
-  bottomitem.textContent = "2022";
-  bottomitem.classList.add("bottomitem");
-  const bottomitemtwo = document.createElement("div");
-  bottomitemtwo.textContent = "Alexei Bradshaw";
-  bottomitemtwo.classList.add("bottomitem");
-  bottomsection.append(bottomitem, bottomitemtwo);
-  pagefooter.appendChild(bottomsection);
-  pagecontent.appendChild(pagefooter);
   pagecontent.appendChild(menusection);
 
   return pagecontent;

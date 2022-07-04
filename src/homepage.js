@@ -22,18 +22,6 @@ function loadHomePage() {
   navlist.append(buttonone, buttontwo, buttonthree);
   navbar.appendChild(navlist);
   pagecontent.appendChild(header);
-  const shulksection = document.createElement("div");
-  shulksection.classList.add("shulkwithcaption");
-  const shulkdescone = document.createElement("div");
-  shulkdescone.textContent = "The best food on Bionis!";
-  const shulkdesctwo = document.createElement("div");
-  shulkdesctwo.textContent = "Making sandwiches since 4010";
-  const shulkimage = document.createElement("div");
-  shulkimage.classList.add("shulk");
-  const shulkdescthree = document.createElement("div");
-  shulkdescthree.textContent = "I'm really feeling it!";
-  shulksection.append(shulkdescone, shulkdesctwo, shulkimage, shulkdescthree);
-  pagecontent.appendChild(shulksection);
   const pagefooter = document.createElement("footer");
   const bottomsection = document.createElement("div");
   bottomsection.classList.add("bottomsection");
@@ -46,7 +34,37 @@ function loadHomePage() {
   bottomsection.append(bottomitem, bottomitemtwo);
   pagefooter.appendChild(bottomsection);
   pagecontent.appendChild(pagefooter);
+  const shulksection = document.createElement("div");
+  shulksection.classList.add("shulkwithcaption");
+  const shulkdescone = document.createElement("div");
+  shulkdescone.textContent = "The best food on Bionis!";
+  const shulkdesctwo = document.createElement("div");
+  shulkdesctwo.textContent = "Making sandwiches since 4010";
+  const shulkimage = document.createElement("div");
+  shulkimage.classList.add("shulk");
+  const shulkdescthree = document.createElement("div");
+  shulkdescthree.textContent = "I'm really feeling it!";
+  shulksection.append(shulkdescone, shulkdesctwo, shulkimage, shulkdescthree);
+  pagecontent.appendChild(shulksection);
   return pagecontent;
 }
 
-export { loadHomePage };
+function loadHomeNotFirst() {
+  const pagecontent = document.querySelector("#content");
+  const shulksection = document.createElement("div");
+  shulksection.classList.add("shulkwithcaption");
+  const shulkdescone = document.createElement("div");
+  shulkdescone.textContent = "The best food on Bionis!";
+  const shulkdesctwo = document.createElement("div");
+  shulkdesctwo.textContent = "Making sandwiches since 4010";
+  const shulkimage = document.createElement("div");
+  shulkimage.classList.add("shulk");
+  const shulkdescthree = document.createElement("div");
+  shulkdescthree.textContent = "I'm really feeling it!";
+  shulksection.append(shulkdescone, shulkdesctwo, shulkimage, shulkdescthree);
+  pagecontent.appendChild(shulksection);
+
+  return pagecontent;
+}
+
+export { loadHomePage, loadHomeNotFirst };
